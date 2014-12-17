@@ -1,0 +1,34 @@
+package lab26;
+
+public class Vic {
+
+	//Zadatak sa predavanja
+	
+	public static void main(String[] args) {
+		Turist turist = new Turist();
+		Prolaznik[] prolaznici = new Prolaznik[3];
+		prolaznici[0] = new Osnovac();
+		prolaznici[1]= new Srednjoskolac();
+		prolaznici[2] = new Fakultetlija();
+		Drot drot = new Drot();
+		System.out.println("Na autobuskoj stanici nalaze se turist, policajac i tri prolaznika.");
+		for (int i=0; i<3; i++)
+		{
+			System.out.println("Turist pita " + (i+1) + ". prolaznika: ");
+			System.out.println("Turist: " + turist.getPitanje());
+			System.out.println((i+1) + ". prolaznik: " + prolaznici[i].getOdgovor());
+		}
+		
+		System.out.println("Da bi bio potpuno siguran, turist pita policajca. ");
+		System.out.println("Turist: " + turist.getPitanje());
+		System.out.println("Policajac: " + drot.getOdgovor());
+		
+		System.out.println("Turisti nije jasno zašto svako odgovara drugačije, pa pita za objašnjenje.");
+		System.out.println("Turist: " + turist.getObjasnjenje());
+		System.out.println("Policajac: " + drot.getObjasnjenje());
+		System.out.println("Turist: " + turist.getPitanje2());
+		System.out.println("Policajac: " + drot.getOdgovor2());
+		
+	}
+
+}
